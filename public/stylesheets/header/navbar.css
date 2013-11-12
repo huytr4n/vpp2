@@ -1,0 +1,17 @@
+.navbar a {
+	text-transform: capitalize;
+}
+
+.navbar li {
+	transition-property: background-color;
+	transition-duration: .2s;
+	transition-timing-function: linear;
+}
+
+.navbar li:hover, .navbar li.active {
+	background-color: #446CB3;	
+}
+
+.navbar li:hover a, .navbar li.active a {
+	color: #fff !important;
+}

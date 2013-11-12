@@ -7,9 +7,21 @@ function myModel (mongoose, app) {
 	var Schema = mongoose.Schema;
 	var productSchema = new Schema ({
 		name : String,
-		price : String,
+		price : Number,
+		currency : String,
 		status : Boolean,
 		quantity : Number,
+		outline : String,
+		cpu : String,
+		ram : String,
+		vag : String,
+		hdd : String,
+		os : String,
+		screen : String,
+		photo : Array,
+		opticalDisk : String,
+		others : String,
+		type : String, // laptop/desktop
 		code : { type : String, index : { unique: true } }
 	});
 

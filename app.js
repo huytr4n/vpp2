@@ -25,6 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 var model = require('./app/model/model');
 model(app);
 
+/**
+ * Routing
+ */
+var adminRoutes = require('./app/controller/admin/routes');
+adminRoutes(app);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
