@@ -72,7 +72,7 @@ function myModel (mongoose, app) {
 	/**
 	 * GET delete product
 	 */
-	app.get('/api/product/:id/remove', function (req, res) {
+	app.delete('/api/product/:id', function (req, res) {
 		return Product.findByIdAndRemove(req.params.id, function (err) {
 			res.send(err);
 		});
